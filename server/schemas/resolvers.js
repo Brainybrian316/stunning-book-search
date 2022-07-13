@@ -32,7 +32,7 @@ const resolvers = {
       return { token, user };
     },
     // login is a function that logs in a user 'POST'
-    login: async (parent, { email, password }) => {
+    login: async (parent, { email, password }) => { // destructured req.body for email and password
       //  find the user by their email
       const user = await User.findOne({ email });
       //  if there is no user, throw an error
@@ -49,7 +49,22 @@ const resolvers = {
       const token = signToken(user);
       //  return the token and user
       return { token, user };
-      }
+      },
+      //  saveBook is a function that saves a book to a user 'POST'
+      saveBook: async (parent, { newBook }, context) => { // destructured req.body for newBook. context verifies that the user is logged in
+
+        // if there is no user in the context, throw an error
+        if (!context.user) {
+          throw new AuthenticationError('You need to be logged in');
+        }
+        // if there is a user in the context, find the user by their id
+        const updatedUser = await User.findByIdAndUpdate(
+          { _id: context.user._id },
+          { $push: { savedBooks: newBook } },
+          { new: true }
+        );
+        return updatedUser;
+      },
     }
 
   }
