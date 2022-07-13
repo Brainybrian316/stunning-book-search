@@ -1,7 +1,7 @@
 // modules to import 
 const { AuthenticationError } = require('apollo-server-express');
 const { User } = require('../models');
-const { signToken } = require('../utils');
+const { signToken } = require('../utils/auth');
 
 const resolvers = {
   //  in GQL a query is used to read or fetch values 'GET' 
@@ -23,7 +23,7 @@ const resolvers = {
    // in GQL a mutation  inserts, updates, or deletes data .  'POST', 'PUT', 'DELETE'
   Mutation: {
     // createUser is a function that creates a user 'POST'
-    createUser: async (parent, args) => { // args is destructured req.body
+    addUser: async (parent, args) => { // args is destructured req.body
       // variable to store the user and create a new user using the args
       const user = await User.create(args);
       //  variable to store the token and sign a token using the user
