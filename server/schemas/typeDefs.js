@@ -2,9 +2,18 @@ const { gql } = require('apollo-server-express');
 
 // typeDefs is a string that contains all of the GraphQL schema
 const typeDefs = gql`
+type User {
+    _id: ID!
+    username: String!
+    email: String!
+    bookCount: Int
+    savedBooks: [Book]
+}
+
 type Query {
   me: User
 }
+
 type Mutation {
   addUser(username: String!, email: String!, password: String!): Auth
   login(email: String!, password: String!): Auth
@@ -12,20 +21,12 @@ type Mutation {
   removeBook(bookId: ID!): User
 }
 
-  type User {
-    _id: ID!
-    username: String!
-    email: String!
-    bookCount: Int
-    savedBooks: [Book]
-  }
-
   type Auth {
     token: ID!
     user: User
   }
 
-  input Book {
+  type Book {
     bookId: ID!
     authors: [String]
     title: String
