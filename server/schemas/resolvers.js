@@ -50,7 +50,7 @@ const resolvers = {
       //  return the token and user
       return { token, user };
       },
-      //  saveBook is a function that saves a book to a user 'POST'
+      //  saveBook is a function that saves a book to a user 'PUT'
       saveBook: async (parent, { newBook }, context) => { // destructured req.body for newBook. context verifies that the user is logged in
 
         // if there is no user in the context, throw an error
@@ -65,6 +65,21 @@ const resolvers = {
         );
         return updatedUser;
       },
+      // removeBook is a function that removes a book 'DELETE'
+      removeBook: async (parent, { bookId }, context) => { // destructure req.body for bookId. 
+        //  if there is no user in context, throw an error
+        if (!context.user) {
+          throw new AuthenticationError('You need to be logged in');
+        }
+        // if there is a user in context, find the user by their id and update their savedBooks
+        const updatedUser = await User.findByIdAndUpdate(
+          { _id: context.user._id },
+          { $pull: { savedBooks: { _id: bookId } } },
+          { new: true }
+        );
+        return updatedUser;
+      }
     }
+  };
 
-  }
+  module.exports = resolvers;
