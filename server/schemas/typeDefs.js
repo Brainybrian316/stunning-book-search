@@ -19,4 +19,29 @@ type: Mutation {
     bookCount: Int
     savedBooks: [Book]
   }
+
+  type Auth {
+    token: ID!
+    user: User
+  }
+
+  input Book {
+    bookId: ID!
+    authors: [String]
+    title: String
+     description: String
+    image: String
+    link: String
+  }
+
+  input BookInput {
+    bookId: String
+    authors: [String]
+    title: String
+    description: String
+    image: String
+    link: String
+  }
+
+
 `
