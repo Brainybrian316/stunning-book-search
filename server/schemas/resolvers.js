@@ -66,7 +66,7 @@ const resolvers = {
         return updatedUser;
       },
       // removeBook is a function that removes a book 'DELETE'
-      removeBook: async (parent, { bookId }, context) => { // destructure req.body for bookId. 
+      deleteBook: async (parent, { bookId }, context) => { // destructure req.body for bookId. 
         //  if there is no user in context, throw an error
         if (!context.user) {
           throw new AuthenticationError('You need to be logged in');
