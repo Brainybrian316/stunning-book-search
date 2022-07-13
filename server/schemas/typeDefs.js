@@ -42,6 +42,6 @@ type: Mutation {
     image: String
     link: String
   }
-
-
 `
+
+module.exports = typeDefs;
