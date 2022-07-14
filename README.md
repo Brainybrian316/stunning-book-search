@@ -23,7 +23,7 @@
 - [Usage](#usage)
 - [Meet The Developer](#meet-the-developer)
 - [Contributing](#-contributing)
-- [Support](h#show-your-support)
+- [Support](#show-your-support)
 - [License](#-license)
 
 ***
