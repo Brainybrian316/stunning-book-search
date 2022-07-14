@@ -18,13 +18,13 @@
 >  Refactoring a fully functional Google Books API search engine built with RESTful API into a GraphQL API app built with Apollo Server. This is a full MERN Stack app which utilizes the following technologies: MongoDB, Express, React, Apollo Server, Express.js, API's, and Node.js
 
 ## Table of Contents
-- [Demo](https://github.com/Brainybrian316/Portfolio/edit/main/README.md#demo-of-project)
-- [Installation](https://github.com/Brainybrian316/Portfolio/edit/main/README.md#install)
-- [Usage](https://github.com/Brainybrian316/Portfolio/edit/main/README.md#usage)
-- [Meet The Developer](https://github.com/Brainybrian316/Portfolio/edit/main/README.md#meet-the-developer)
-- [Contributing](https://github.com/Brainybrian316/Portfolio/edit/main/README.md#-contributing)
-- [Support](https://github.com/Brainybrian316/Portfolio/edit/main/README.md#show-your-support)
-- [License](https://github.com/Brainybrian316/Portfolio/edit/main/README.md#-license)
+- [Demo](https://github.com/Brainybrian316/stunning-book-search/edit/main/README.md#demo-of-project)
+- [Installation](https://github.com/Brainybrian316/stunning-book-search/edit/main/README.md#install)
+- [Usage](https://github.com/Brainybrian316/stunning-book-search/edit/main/README.md#usage)
+- [Meet The Developer](https://github.com/Brainybrian316/stunning-book-search/edit/main/README.md#meet-the-developer)
+- [Contributing](https://github.com/Brainybrian316/stunning-book-search/edit/main/README.md#-contributing)
+- [Support](https://github.com/Brainybrian316/stunning-book-search/edit/main/README.md#show-your-support)
+- [License](https://github.com/Brainybrian316/stunning-book-search/edit/main/README.md#-license)
 
 ***
 ## Demo of Project 
