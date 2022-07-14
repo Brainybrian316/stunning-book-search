@@ -56,7 +56,7 @@ Client:
 npm start
 ```
 
-You can read documentation on how to use<a href="https://www.apollographql.com/docs/react">GraphQL</a> to manipulate/test the data with the GET, POST, PUT, DELETE request. Inside the terminal you can open GraphQL Playground by visiting the following URL:
+You can read documentation on how to use <a href="https://www.apollographql.com/docs/react">GraphQL</a> to manipulate/test the data with the GET, POST, PUT, DELETE request. Inside the terminal you can open GraphQL Playground by visiting the following URL:
 ```localhost:3001/graphql``` when the server is running.
 
 ***
