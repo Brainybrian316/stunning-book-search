@@ -1,7 +1,6 @@
 const express = require('express');
 const path = require('path');
 const db = require('./config/connection');
-const routes = require('./routes');
 // import apollo server
 const { ApolloServer } = require('apollo-server-express');
 // import typeDefs and resolvers
@@ -28,8 +27,6 @@ app.use(express.json());
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../client/build')));
 }
-
-// app.use(routes);
 
 // get all is *
 app.get('*', (req, res) => {
