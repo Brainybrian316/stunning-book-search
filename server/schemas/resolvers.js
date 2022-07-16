@@ -74,7 +74,7 @@ const resolvers = {
         // if there is a user in context, find the user by their id and update their savedBooks
         const updatedUser = await User.findByIdAndUpdate(
           { _id: context.user._id },
-          { $pull: { savedBooks: { _id: bookId } } },
+          { $pull: { savedBooks: { bookId } } },
           { new: true }
         );
         return updatedUser;
